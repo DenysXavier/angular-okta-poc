@@ -37,7 +37,7 @@ export class UnprotectedComponent implements OnInit {
     await this.oktaAuth.signInWithRedirect();
   }
 
-  public signOut(): void {
-    throw new Error('Method not implemented.');
+  public async signOut(): Promise<void> {
+    await this.oktaAuth.signOut();
   }
 }
