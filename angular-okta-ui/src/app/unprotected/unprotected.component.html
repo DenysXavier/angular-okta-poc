@@ -1,0 +1,11 @@
+<p>This is an unprotected page. No need to be authenticated.</p>
+<div class="alert {{ getAlertType() }}">
+    You currently are <b>{{ UserCurrentStateDescription }}</b>
+</div>
+<p>Try to access profile data in this <a href="/profile">PROTECTED page</a></p>
+<p>&nbsp;</p>
+@if (isAuthenticated) {
+<button (click)="signOut()"> Sign out </button>
+} @else {
+<button (click)="signIn()" class="btn btn-primary"> Sign in </button>
+}
