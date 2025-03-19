@@ -1,0 +1,12 @@
+@if (myProfile) {
+<h3>Profile</h3>
+<p>{{ myProfile.name }}
+    <br>
+    <span class="text-muted">{{ myProfile.email }}</span>
+</p>
+} @else {
+<p>No profile loaded.</p>
+<p>You are probably <b>not</b> authenticated.</p>
+}
+<p>&nbsp;</p>
+<p><a href="/">Go back</a></p>
