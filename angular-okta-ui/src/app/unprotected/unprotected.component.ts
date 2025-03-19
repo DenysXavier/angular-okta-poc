@@ -33,8 +33,8 @@ export class UnprotectedComponent implements OnInit {
     return 'alert-danger';
   }
 
-  public signIn(): void {
-    throw new Error('Method not implemented.');
+  public async signIn(): Promise<void> {
+    await this.oktaAuth.signInWithRedirect();
   }
 
   public signOut(): void {
